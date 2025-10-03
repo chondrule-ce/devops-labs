@@ -1,0 +1,33 @@
+name: Flask CI/CD Pipeline
+
+on: # Events to trigger the workflow
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # This Ubuntu environment is only for running tests and will be destroyed after the job finishes
+
+    steps:
+    - name: Fetch code
+      uses: actions/checkout@v3 # author/repo@version, use pre-defined official GitHub Actions
+
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+        pip install pytest
+
+    - name: Run tests
+      run: pytest   
+
+    - name: Build Docker image
+      run: docker build -t my-flask-app .
+
