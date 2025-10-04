@@ -1,0 +1,27 @@
+# Bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtualenvs / env files (may contain keys)
+.venv/
+venv/
+env/
+.env
+.env.*
+*.env
+
+# Git
+.git/
+
+# Editor / OS files
+.vscode/
+.idea/
+.DS_Store
+
+# Test & logs
+.pytest_cache/
+*.log
+
+
