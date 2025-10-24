@@ -27,7 +27,7 @@ jobs:
 
     - name: Run tests
       run: |
-        cd flask-ci-cd-demo
+        working-directory: flask-ci-cd-demo/tests
         pytest   
 
     - name: Build Docker image
