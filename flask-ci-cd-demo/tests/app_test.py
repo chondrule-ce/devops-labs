@@ -3,7 +3,7 @@
 """
 
 import pytest
-from app import app
+from flask_ci_cd_demo.app import app
 
 @pytest.fixture
 def client():

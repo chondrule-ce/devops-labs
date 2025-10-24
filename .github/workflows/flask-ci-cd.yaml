@@ -26,9 +26,8 @@ jobs:
         pip install pytest
 
     - name: Run tests
-      working-directory: flask-ci-cd-demo/tests
-      run: |
-        pytest   
+      working-directory: .
+      run: pytest flask-ci-cd-demo/tests/
 
     - name: Build Docker image
       run: docker build -t my-flask-app .
