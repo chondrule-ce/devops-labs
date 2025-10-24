@@ -22,13 +22,13 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install -r flask-ci-cd-demo/requirements.txt
+        pip install -r flask_ci_cd_demo/requirements.txt
         pip install pytest
 
     - name: Run tests
       run: |
         export PYTHONPATH=$PYTHONPATH:$(pwd)
-        pytest flask-ci-cd-demo/tests/
+        pytest flask_ci_cd_demo/tests/
 
     - name: Build Docker image
       run: docker build -t my-flask-app .
