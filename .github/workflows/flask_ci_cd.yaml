@@ -31,5 +31,5 @@ jobs:
         pytest flask_ci_cd_demo/tests/
 
     - name: Build Docker image
-      run: docker build -t my-flask-app .
+      run: docker build -t my-flask-app flask_ci_cd_demo
 
